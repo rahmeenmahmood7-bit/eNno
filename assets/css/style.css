@@ -1,0 +1,720 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --greencolor: #10BC69;
+    --headingcolor: #5F687B;
+    --defaultcolor: #444444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--headingcolor);
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 33px;
+    cursor: pointer;
+}
+
+a,
+span {
+    display: inline-block;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 1150px;
+    margin: 0 auto;
+}
+
+.nav-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.nav-top ul {
+    display: flex;
+}
+
+.nav-top ul li a {
+    color: var(--headingColor);
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: all .5s ease;
+    padding: 5px 20px;
+}
+
+.nav-top ul li a:hover {
+    cursor: pointer;
+    color: var(--greencolor);
+}
+
+.button {
+    background-color: var(--greencolor);
+    color: white !important;
+    padding: 10px 25px !important;
+    font-weight: normal !important;
+    border-radius: 30px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    height: calc(100vh - 78px);
+}
+
+.hero h1 {
+    margin-bottom: 10px;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero .right {
+    text-align: right;
+}
+
+.btn {
+    color: rgb(44, 42, 42);
+    border-radius: 30px;
+    padding: 10px 25px !important;
+    font-weight: normal !important;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.links .btn i {
+    font-size: 32px;
+    color: var(--greencolor);
+}
+
+.links {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.hero-img {
+    width: 85%;
+    animation-name: bouncing;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+/* intro style */
+.intro-parent {
+    display: flex;
+    padding: 100px 0;
+    gap: 25px;
+}
+
+.intro-parent .intro-card {
+    background-color: #f2f2f2;
+    padding: 40px 20px;
+    transition: all .5s ease;
+}
+
+.intro-card i {
+    color: var(--greencolor);
+    font-size: 40px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.intro-card h3 {
+    margin-bottom: 15px;
+    transition: all 1s ease;
+    font-size: 22px;
+}
+
+.intro-card:hover {
+    cursor: pointer;
+    transform: translateY(-10px);
+}
+
+.intro-card:hover h3 {
+    color: var(--greencolor);
+}
+/* About styles*/
+section#about {
+    padding: 100px 0;
+}
+
+.about-parent {
+    display: flex;
+    gap: 20px;
+}
+
+.about-img img {
+    width: 600px;
+}
+
+.about-content h3 {
+    font-size: 26px;
+    color: var(--headingColor);
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    margin-bottom: 25px;
+}
+.about-content ul li {
+    margin-bottom: 10px;
+}
+
+.about-content ul li i {
+    color: var(--greencolor);
+    font-size: 20px;
+}
+
+.analytics {
+    margin-top: 50px;
+    display: flex;
+    padding: 20px;
+}
+
+.analytics>div {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.analytics>div>h4 {
+    color: var(--greencolor);
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/* Services styles*/
+#services{
+    background-color: #f9f9f9;
+    padding: 100px 0;
+}
+.services h3{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.services {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    padding: 60px 30px;
+    background-color: white;
+    border: 1px solid #f1f1f1;
+    width: 31%;
+    height: 355px;
+    text-align: center;
+    transition: all .5s ease;
+}
+
+.service-box:hover {
+    border: 1px solid var(--greencolor);
+    cursor: pointer;
+}
+
+.service-box .icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--greencolor);
+    color: white;
+    width: fit-content;
+    margin: 0 auto 25px;
+    height: 60px;
+    width: 65px;
+    font-size: 28px;
+    border-radius: 5px;
+}
+
+.heading {
+    margin-bottom: 10px;
+    color: var(--headingColor);
+}
+
+/* portfolio styles */
+#portfolio {
+    padding: 100px 0;
+}
+
+.heading,
+.intro {
+    text-align: center;
+}
+
+.container .heading {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.container .intro {
+    margin-bottom: 40px;
+}
+
+.Portfolio-parent {
+    display: flex;
+    gap: 20px;
+}
+.app-box {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    justify-content: center;
+}
+
+.app-box img {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.app-box-hover {
+    background-color: #f4f4f4;
+    position: absolute;
+    bottom: 22px;
+    padding: 24px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: all .6s ease;
+}
+
+.app-box:hover .app-box-hover {
+    opacity: 1;
+    transform: translateY(-15px);
+
+}
+
+
+.app-box-hover h4 {
+    color: var(--headingColor);
+    margin-bottom: 7px;
+}
+
+/*testimonials styles*/
+#testimonials {
+    background-color: #f9f9f9;
+    padding: 100px 0;
+}
+
+.worker {
+    display: flex;
+    gap: 20px;
+}
+
+.worker1 .tex {
+    padding: 18px;
+    border-radius: 5px;
+    width: 350px;
+    background-color: #e3e0e044;
+    height: 200px;
+}
+
+.tex i {
+    font-size: 17px;
+    color: var(--greencolor);
+    display: flex;
+}
+
+.pic {
+    position: relative;
+    left: 20px;
+    bottom: 41px;
+}
+
+.worker1 img {
+    border-radius: 100%;
+    width: 90px;
+    border: 5px solid white;
+    margin-bottom: 10px;
+}
+
+.pic h4 {
+    margin-bottom: 4px;
+}
+
+.pic p {
+   
+    font-size: 14px;
+}
+.circles{
+    text-align: center;
+}
+.circles i{
+    font-size: 15px;
+    color: var(--greencolor);
+    
+}
+/*call to action style*/
+#call-to-action{
+    background-color: var(--greencolor);
+    margin-bottom: 75px;
+}
+.cta-parent{
+    text-align: center;
+    padding: 80px 100px;
+    color: white;
+}
+.cta-parent h1{
+    font-size: 27px;
+    margin-bottom: 13px;
+}
+.cta-parent p{
+    font-weight: 400;
+    margin-bottom: 29px;
+}
+.cta-button{
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 13px 37px;
+    color: white;
+    font-size: 19px;
+}
+/* Team style*/
+#Team-member{
+    margin-bottom:100px ;
+}
+.team{
+    display: flex;
+    gap: 20px;
+}
+.Picture img{
+    width: 356px;
+}
+.member-info{
+    width: 300px;
+    margin: 0px auto;
+    position: relative;
+    top: -50px;
+    background-color: white;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 15px;
+    
+}
+.member-info h4{
+    font-size: 17px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.line{
+    width: 50px;
+    border-top: 1px solid rgb(211 206 206);
+    margin-bottom: 10px;
+
+}
+.work{
+    display: flex;
+    justify-content: space-between;
+}
+.work span{
+    font-size: 13px;
+    font-style: italic;
+}
+.social i{
+    color: rgb(211 206 206);
+    font-size: 19px;
+}
+.social i:hover{
+    color: var(--greencolor);
+}
+/*contact style*/
+#contact {
+    padding: 0px 0px 100px 0px;
+}
+
+#contact .section-intro {
+    color: var(--headingcolor);
+}
+.info-side{
+    width: 450px;
+}
+
+.info {
+    display: flex;
+    gap: 10px;
+    
+    align-items: center;
+    margin-bottom: 40px;
+    transition: all 1s ease;
+}
+
+.info i {
+    font-size: 22px;
+    background-color: color-mix(in srgb, var(--greencolor), transparent 92%);
+    color: var(--greencolor);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 1s ease;
+}
+.info:hover i{
+background-color: var(--greencolor);
+color: white;
+}
+
+.info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--headingcolor);
+}
+.info p{
+    font-size: 14px;
+    color: var(--headingcolor);
+}
+
+
+.contact-parent {
+    display: flex;
+    gap: 20px;
+}
+
+.info-side {
+    padding: 30px;
+    box-shadow:rgba(0, 0, 0, 0.1) 0px 0px 20px ;
+}
+
+.formside {
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+    width: 600px;
+}
+.name-email{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.name-email .yourname label{
+    display: inline-block;
+    padding-bottom: 10px;
+    color: black;
+    font-weight: 400;
+}
+.name-email .yourname input{
+    display: inline-block;
+    padding: 13px 45px;
+    border:1px solid #cccbcb;
+}
+.subject label{
+      display: inline-block;
+    padding-bottom: 10px;
+    color: black;
+    font-weight: 400;
+}
+.subject input{
+     display: inline-block;
+    padding: 13px 30px;
+    border:1px solid #cccbcb;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.message label{
+       display: inline-block;
+    padding-bottom: 10px;
+    color: black;
+    font-weight: 400;
+}
+.message textarea{
+     border:1px solid #cccbcb;
+     margin-bottom: 30px;
+}
+.botn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botn a{
+    background-color: var(--greencolor);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 30px;
+}
+/*join style*/
+#join{
+    background-color: #f9f9f9;
+    padding: 50px 0px;
+}
+.join-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.join-child div h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 12px;
+    color: var(--headingcolor);
+    font-weight: 600;
+}
+.join-child div p{
+    font-size: 14px;
+    color: #242323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+.inputarea input{
+       margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 12px 8px;
+    position: relative;
+    background-color: white;
+    border: 1px solid color-mix(in srgb,var(--defaultcolor) transparent 90%);
+    box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    transition: 0.3s;
+    border-radius: 50px;
+    width: 100%;
+}
+.inputarea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 560px;
+}
+.inputarea a{
+     margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 12px 18px;
+    background-color: var(--greencolor);
+    color: white;
+    border-radius: 100px;
+    position: absolute;
+    left: 865px;
+}
+.footer-parent{
+    padding: 50px 100px 30px;
+    display: flex;
+   flex-wrap: wrap;
+}
+.side-footer{
+    display: flex;
+}
+.enno h3{
+    color: var(--headingcolor);
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.enno p{
+    font-size: 13px;
+  margin-bottom: 5px;
+   
+}
+.ph {
+    display: flex;
+    margin-top: 20px;
+   color: rgb(53, 52, 52);
+    gap: 5px;
+    margin-bottom: 5px;
+}
+.pha{
+    display: flex;
+    color: rgb(53, 52, 52);
+    margin-bottom: 10px;
+    gap: 5px;
+}
+.last i{
+    color: var(--greencolor);
+
+}
+.last a{
+    color: #444444;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+.fg{
+    color: var(--headingcolor);
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.useful,.our-service{
+    width: 200px;
+    padding: 10px;
+}
+.enno,.follow{
+    width: 370px;
+    padding: 10px;
+}
+.follow p{
+    font-size: 13px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #444444;
+}
+.follow div {
+    display: flex;
+    gap: 15px;
+    margin-left: 10px;
+}
+.follow div i{
+    font-size: 20px;
+    color: var(--headingcolor);
+    border-radius: 50%;
+    border: 1px solid var(--headingcolor);
+    padding: 8px;
+}
+
+.final{
+    padding: 30px 0px;
+    border-top: 1px solid rgb(231, 231, 231);
+    width: 1120px;
+    margin: 0px auto;
+    color: #444444;
+}
+.final .first-line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.first-line a{
+    color: var(--greencolor);
+}
+/* bounce animation */
+@keyframes bouncing {
+    from {
+        transform: translateY(-20px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
